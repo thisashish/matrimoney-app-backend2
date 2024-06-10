@@ -240,7 +240,8 @@ exports.login = async (req, res) => {
             email: user.email,
             userId: user.userId,
             profileSetup: user.profileSetup, 
-            isOtpVerified:user.isOtpVerified
+            isOtpVerified:user.isOtpVerified,
+            isPhotoUploaded: user.isPhotoUploaded,
         };
 
         const token = jwt.sign(

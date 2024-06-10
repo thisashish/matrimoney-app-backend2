@@ -40,6 +40,11 @@ exports.uploadPhotos = async (req, res) => {
         }));
 
         user.photos.push(...uploadedPhotos);
+
+        if (uploadedPhotos.length > 0) {
+            user.isPhotoUploaded = true;
+        }
+
         await user.save();
 
         res.status(201).json({ message: 'Photos uploaded successfully' });

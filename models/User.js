@@ -80,6 +80,7 @@ const UserSchema = new mongoose.Schema({
         default: false
     },
     profileSetup: { type: Boolean, default: false },
+    isPhotoUploaded: { type: Boolean, default: false },
     photos: [{
         filename: String,
         url: String
